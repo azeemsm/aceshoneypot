@@ -1,0 +1,91 @@
+2018-10-12 11:32:06.292 - [Info] MITM Version: 1.2
+2018-10-12 11:32:06.295 - [Info] Auto Access Enabled: true
+2018-10-12 11:32:06.295 - [Debug] [Init] Auto Access Barrier: true
+2018-10-12 11:32:06.384 - [Info] SSH man-in-the-middle server for 172.20.0.5 listening on 0.0.0.0:10001
+2018-10-12 11:32:06.398 - [Debug] Your session ID: 1231
+2018-10-12 11:32:12.746 - [Debug] [Connection] Attacker connected: 10.105.82.41
+2018-10-12 11:32:12.760 - [Debug] [Connection] Attacker closed the connection
+2018-10-12 11:40:30.532 - [Debug] [Connection] Attacker connected: 10.105.245.158
+2018-10-12 11:40:31.955 - [Debug] [Auth] Attacker 10.105.245.158 trying to authenticate with "none"
+2018-10-12 11:40:31.957 - [Debug] [Auth] Attacker authentication error: No authentication method provided
+2018-10-12 11:40:33.739 - [Debug] [Auth] Attacker 10.105.245.158 trying to authenticate with "password"
+2018-10-12 11:40:33.740 - [Debug] [Auto Access] Attacker: 10.105.245.158, Threshold: 3, Attempts: 1
+2018-10-12 11:40:33.740 - [Debug] [Auth] Attacker authentication error: Not yet compromised
+2018-10-12 11:40:33.741 - [Debug] [Auth] Attacker: 10.105.245.158 has so far made 1 attempts. Remaining: 5 attempts
+2018-10-12 11:40:34.222 - [Debug] [Auth] Attacker 10.105.245.158 trying to authenticate with "password"
+2018-10-12 11:40:34.227 - [Debug] [Auto Access] Attacker: 10.105.245.158, Threshold: 3, Attempts: 2
+2018-10-12 11:40:34.227 - [Debug] [Auth] Attacker authentication error: Not yet compromised
+2018-10-12 11:40:34.228 - [Debug] [Auth] Attacker: 10.105.245.158 has so far made 2 attempts. Remaining: 4 attempts
+2018-10-12 11:40:34.954 - [Debug] [Auth] Attacker 10.105.245.158 trying to authenticate with "password"
+2018-10-12 11:40:34.955 - [Debug] [Auto Access] Attacker: 10.105.245.158, Threshold: 3, Attempts: 3
+2018-10-12 11:40:34.955 - [Debug] [Auto Access] Compromising the honeypot
+2018-10-12 11:40:34.959 - [Debug] [Auto Access] Adding the following credentials: "nick:k"
+2018-10-12 11:40:35.116 - [Debug] [LXC] Attempting to connect to the honeypot: 172.20.0.5
+2018-10-12 11:40:35.151 - [Debug] [Auth] Attacker authenticated
+2018-10-12 11:40:35.267 - [Debug] [SHELL] Opened shell for attacker
+2018-10-12 11:40:37.243 - [Debug] [SHELL] Attacker Keystroke: p
+2018-10-12 11:40:37.430 - [Debug] [SHELL] Attacker Keystroke: i
+2018-10-12 11:40:37.519 - [Debug] [SHELL] Attacker Keystroke: n
+2018-10-12 11:40:37.716 - [Debug] [SHELL] Attacker Keystroke: g
+2018-10-12 11:40:37.762 - [Debug] [SHELL] Attacker Keystroke: [Space]
+2018-10-12 11:40:38.012 - [Debug] [SHELL] Attacker Keystroke: g
+2018-10-12 11:40:38.196 - [Debug] [SHELL] Attacker Keystroke: g
+2018-10-12 11:40:38.321 - [Debug] [SHELL] Attacker Keystroke: o
+2018-10-12 11:40:38.610 - [Debug] [SHELL] Attacker Keystroke: [DEL]
+2018-10-12 11:40:38.750 - [Debug] [SHELL] Attacker Keystroke: [DEL]
+2018-10-12 11:40:38.970 - [Debug] [SHELL] Attacker Keystroke: o
+2018-10-12 11:40:39.267 - [Debug] [SHELL] Attacker Keystroke: o
+2018-10-12 11:40:39.359 - [Debug] [SHELL] Attacker Keystroke: g
+2018-10-12 11:40:39.586 - [Debug] [SHELL] Attacker Keystroke: l
+2018-10-12 11:40:39.711 - [Debug] [SHELL] Attacker Keystroke: e
+2018-10-12 11:40:39.883 - [Debug] [SHELL] Attacker Keystroke: .
+2018-10-12 11:40:40.101 - [Debug] [SHELL] Attacker Keystroke: c
+2018-10-12 11:40:40.164 - [Debug] [SHELL] Attacker Keystroke: o
+2018-10-12 11:40:40.323 - [Debug] [SHELL] Attacker Keystroke: m
+2018-10-12 11:40:40.892 - [Debug] [SHELL] Attacker Keystroke: [CR]
+2018-10-12 11:40:40.893 - [Debug] [SHELL] line from reader: ping google.com
+2018-10-12 11:40:40.894 - [Debug] [SHELL] Keystroke buffer: 112,105,110,103,32,103,103,111,127,127,111,111,103,108,101,46,99,111,109,13
+2018-10-12 11:40:42.282 - [Debug] [SHELL] Attacker Keystroke: [ETX]
+2018-10-12 11:40:43.738 - [Debug] [SHELL] Attacker Keystroke: e
+2018-10-12 11:40:43.938 - [Debug] [SHELL] Attacker Keystroke: c
+2018-10-12 11:40:44.000 - [Debug] [SHELL] Attacker Keystroke: h
+2018-10-12 11:40:44.124 - [Debug] [SHELL] Attacker Keystroke: o
+2018-10-12 11:40:44.187 - [Debug] [SHELL] Attacker Keystroke: [Space]
+2018-10-12 11:40:55.204 - [Debug] [SHELL] Attacker Keystroke: "
+2018-10-12 11:40:56.256 - [Debug] [SHELL] Attacker Keystroke: s
+2018-10-12 11:40:56.398 - [Debug] [SHELL] Attacker Keystroke: a
+2018-10-12 11:40:56.554 - [Debug] [SHELL] Attacker Keystroke: w
+2018-10-12 11:40:57.079 - [Debug] [SHELL] Attacker Keystroke: "
+2018-10-12 11:40:57.960 - [Debug] [SHELL] Attacker Keystroke: [CR]
+2018-10-12 11:40:57.960 - [Debug] [SHELL] line from reader: echo "saw"
+2018-10-12 11:40:57.961 - [Debug] [SHELL] Keystroke buffer: 3,101,99,104,111,32,34,115,97,119,34,13
+2018-10-12 11:40:59.141 - [Debug] [SHELL] Attacker Keystroke: e
+2018-10-12 11:40:59.376 - [Debug] [SHELL] Attacker Keystroke: c
+2018-10-12 11:40:59.474 - [Debug] [SHELL] Attacker Keystroke: h
+2018-10-12 11:40:59.666 - [Debug] [SHELL] Attacker Keystroke: o
+2018-10-12 11:40:59.724 - [Debug] [SHELL] Attacker Keystroke: [Space]
+2018-10-12 11:41:00.261 - [Debug] [SHELL] Attacker Keystroke: "
+2018-10-12 11:41:00.751 - [Debug] [SHELL] Attacker Keystroke: g
+2018-10-12 11:41:00.857 - [Debug] [SHELL] Attacker Keystroke: o
+2018-10-12 11:41:00.975 - [Debug] [SHELL] Attacker Keystroke: o
+2018-10-12 11:41:01.301 - [Debug] [SHELL] Attacker Keystroke: d
+2018-10-12 11:41:01.411 - [Debug] [SHELL] Attacker Keystroke: [Space]
+2018-10-12 11:41:01.897 - [Debug] [SHELL] Attacker Keystroke: j
+2018-10-12 11:41:01.977 - [Debug] [SHELL] Attacker Keystroke: o
+2018-10-12 11:41:02.505 - [Debug] [SHELL] Attacker Keystroke: b
+2018-10-12 11:41:03.104 - [Debug] [SHELL] Attacker Keystroke: "
+2018-10-12 11:41:03.304 - [Debug] [SHELL] Attacker Keystroke: [CR]
+2018-10-12 11:41:03.305 - [Debug] [SHELL] line from reader: echo "good job"
+2018-10-12 11:41:03.305 - [Debug] [SHELL] Keystroke buffer: 101,99,104,111,32,34,103,111,111,100,32,106,111,98,34,13
+2018-10-12 11:41:04.368 - [Debug] [SHELL] Attacker Keystroke: e
+2018-10-12 11:41:04.571 - [Debug] [SHELL] Attacker Keystroke: x
+2018-10-12 11:41:04.674 - [Debug] [SHELL] Attacker Keystroke: i
+2018-10-12 11:41:04.845 - [Debug] [SHELL] Attacker Keystroke: t
+2018-10-12 11:41:05.072 - [Debug] [SHELL] Attacker Keystroke: [CR]
+2018-10-12 11:41:05.073 - [Debug] [SHELL] line from reader: exit
+2018-10-12 11:41:05.073 - [Debug] [SHELL] Keystroke buffer: 101,120,105,116,13
+2018-10-12 11:41:05.077 - [Debug] [SHELL] Honeypot ended shell
+2018-10-12 11:41:05.122 - [Debug] [SHELL] Attacker ended the shell
+2018-10-12 11:41:05.123 - [Debug] [Connection] Attacker closed connection
+2018-10-12 11:41:05.126 - [Debug] [LXC] Container's OpenSSH server ended connection
+2018-10-12 11:41:05.127 - [Debug] [LXC] Container's OpenSSH server closed connection
