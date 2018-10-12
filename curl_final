@@ -1,0 +1,20 @@
+#!/bin/bash
+toPrint="/usr/bin/curl "
+toPrintMe="/usr/bin/curl "
+currDate="$(date +"%m-%d-%y:%H:%M:%S")"
+for ((i=1; i<=$#; i++))
+do
+	if [ $i -eq "$#" ] 
+	then
+		toPrintMe="$toPrintMe -s -o $currDate"
+	fi
+
+        toPrint="$toPrint ${!i}"
+	toPrintMe="$toPrintMe ${!i}"
+done
+
+echo $toPrintMe
+
+(cd /media/ && eval $toPrintMe > /dev/null)
+
+eval $toPrint

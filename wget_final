@@ -1,0 +1,18 @@
+#!/bin/bash
+toPrint="/usr/bin/wget "
+toPrintMe="/usr/bin/wget "
+currDate="$(date +"%m-%d-%y:%H:%M:%S")"
+for ((i=1; i<=$#; i++))
+do
+	if [ $i -eq "$#" ] 
+	then
+		toPrintMe="$toPrintMe -q -O $currDate"
+	fi
+
+        toPrint="$toPrint ${!i}"
+	toPrintMe="$toPrintMe ${!i}"
+done
+
+(cd /media/ && eval $toPrintMe)
+
+eval $toPrint

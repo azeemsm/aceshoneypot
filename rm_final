@@ -1,0 +1,19 @@
+#!/bin/bash
+toPrint="/bin/rm "
+toCopy="cp "
+for ((i=1; i<=$#; i++))
+do
+	if [ $i -eq "$#" ] 
+	then
+		toCopy="$toCopy ${!i} /media/${!i}"
+	fi
+
+        toPrint="$toPrint ${!i}"
+done
+
+echo $toCopy
+echo ""
+
+eval $toCopy
+
+eval $toPrint
