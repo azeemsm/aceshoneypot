@@ -19,9 +19,11 @@ if [ $cont -eq 101 ]; then
 	
 	# FIREWALL RULES: 101
 	# ssh port forwarding for mitm
-	dstPortNumber=10001
-	iptables -t nat -A PREROUTING -d 128.8.37.104 -p tcp --dport 22 -j REDIRECT --to-port $dstPortNumber
-	iptables -t nat -A PREROUTING -d 128.8.37.104 -p tcp --dport $dstPortNumber -j DNAT --to-destination 127.0.0.1
+	#dstPortNumber=10001
+	#iptables -t nat -A PREROUTING -d 128.8.37.104 -p tcp --dport 22 -j REDIRECT --to-port $dstPortNumber
+	#iptables -t nat -A PREROUTING -d 128.8.37.104 -p tcp --dport $dstPortNumber -j DNAT --to-destination 127.0.0.1
+
+	iptables -t nat -I PREROUTING 1 -d 128.8.37.104 -p tcp --dport 22 -j DNAT --to-destination 172.20.0.1:10001
 
 	iptables -t nat -A PREROUTING -d 128.8.37.104 -j DNAT --to-destination 172.20.0.5
 	iptables -t nat -A POSTROUTING -s 172.20.0.5 -j SNAT --to-source 128.8.37.104
@@ -38,9 +40,11 @@ elif [ $cont -eq 102 ]; then
 	
 	# FIREWALL RULES: 102
 	# ssh port forwarding for mitm
-	dstPortNumber=10002
-	iptables -t nat -A PREROUTING -d 128.8.238.66 -p tcp --dport 22 -j REDIRECT --to-port $dstPortNumber
-	iptables -t nat -A PREROUTING -d 128.8.238.66 -p tcp --dport $dstPortNumber -j DNAT --to-destination 127.0.0.1
+	#dstPortNumber=10002
+	#iptables -t nat -A PREROUTING -d 128.8.238.66 -p tcp --dport 22 -j REDIRECT --to-port $dstPortNumber
+	#iptables -t nat -A PREROUTING -d 128.8.238.66 -p tcp --dport $dstPortNumber -j DNAT --to-destination 127.0.0.1
+
+	iptables -t nat -I PREROUTING 1 -d 128.8.238.66 -p tcp --dport 22 -j DNAT --to-destination 172.20.0.1:10002
 
 	iptables -t nat -A PREROUTING -d 128.8.238.66 -j DNAT --to-destination 172.20.0.2
 	iptables -t nat -A POSTROUTING -s 172.20.0.2 -j SNAT --to-source 128.8.238.66
@@ -56,9 +60,10 @@ elif [ $cont -eq 201 ]; then
 
 	# FIREWALL RULES: 201
 	# ssh port forwarding for mitm
-	dstPortNumber=10003
-	iptables -t nat -A PREROUTING -d 128.8.238.88 -p tcp --dport 22 -j REDIRECT --to-port $dstPortNumber
-	iptables -t nat -A PREROUTING -d 128.8.238.88 -p tcp --dport $dstPortNumber -j DNAT --to-destination 127.0.0.1
+	#dstPortNumber=10003
+	#iptables -t nat -A PREROUTING -d 128.8.238.88 -p tcp --dport 22 -j REDIRECT --to-port $dstPortNumber
+	#iptables -t nat -A PREROUTING -d 128.8.238.88 -p tcp --dport $dstPortNumber -j DNAT --to-destination 127.0.0.1
+	iptables -t nat -I PREROUTING 1 -d 128.8.238.88 -p tcp --dport 22 -j DNAT --to-destination 172.20.0.1:10003
 
 	iptables -t nat -A PREROUTING -d 128.8.238.88 -j DNAT --to-destination 172.20.0.3
 	iptables -t nat -A POSTROUTING -s 172.20.0.3 -j SNAT --to-source 128.8.238.88
@@ -74,9 +79,10 @@ elif [ $cont -eq 202 ]; then
 
 	# FIREWALL RULES: 202
 	# ssh port forwarding for mitm
-	dstPortNumber=10004
-	iptables -t nat -A PREROUTING -d 128.8.238.110 -p tcp --dport 22 -j REDIRECT --to-port $dstPortNumber
-	iptables -t nat -A PREROUTING -d 128.8.238.110 -p tcp --dport $dstPortNumber -j DNAT --to-destination 127.0.0.1
+	#dstPortNumber=10004
+	#iptables -t nat -A PREROUTING -d 128.8.238.110 -p tcp --dport 22 -j REDIRECT --to-port $dstPortNumber
+	#iptables -t nat -A PREROUTING -d 128.8.238.110 -p tcp --dport $dstPortNumber -j DNAT --to-destination 127.0.0.1
+	iptables -t nat -I PREROUTING 1 -d 128.8.238.110 -p tcp --dport 22 -j DNAT --to-destination 172.20.0.1:10004
 
 	iptables -t nat -A PREROUTING -d 128.8.238.110 -j DNAT --to-destination 172.20.0.4
 	iptables -t nat -A POSTROUTING -s 172.20.0.4 -j SNAT --to-source 128.8.238.110

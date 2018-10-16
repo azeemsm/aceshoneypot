@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#kill `cat /root/nohupOutputs/101pid.txt`
+#kill `cat /root/nohupOutputs/102pid.txt`
+#kill `cat /root/nohupOutputs/201pid.txt`
+#kill `cat /root/nohupOutputs/202pid.txt`
 nohup node /root/MITM/mitm/index.js HACS200_1G 10001 172.20.0.5 101 > /root/nohupOutputs/101 &
 echo $! > /root/nohupOutputs/101pid.txt
 nohup node /root/MITM/mitm/index.js HACS200_1G 10002 172.20.0.2 102 > /root/nohupOutputs/102 &

@@ -28,8 +28,11 @@ for cont in 101 102 201 202; do
 		echo "RECYCLING CONTAINER $cont"
 
 		pct stop $cont
+		killsinglemitm.sh $cont
+		umount /dev/mapper/pve-vm--$cont--disk--1
 		pct destroy $cont
 		create.sh $cont
+		singlemitm.sh $cont
 	fi
 done
 
