@@ -6,7 +6,7 @@ log -k /root/key.json -s https://docs.google.com/spreadsheets/d/1SDQGK6XhUSj0aar
 
 memhost=$(free -h | awk '{if (NR==2) print $0}' | awk '{print $3}')
 diskhost=$(df -h --total | tail -n 1 | awk '{print $3}')
-cpuhost=$(uptime | awk '{print $11}')
+cpuhost=$(uptime | awk '{print $12}')
 
 if [ -z $cpuhost ]
 then
@@ -23,7 +23,7 @@ do
 	
 	disk=$(echo "df -h --total | tail -n 1" | pct enter $cont | awk '{print $3}')
 	
-	cpu=$(pct exec $cont uptime | awk '{print $11}')
+	cpu=$(pct exec $cont uptime | awk '{print $12}')
 	
 	if [ -z $cpu ]
 	then

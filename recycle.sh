@@ -21,7 +21,7 @@ while [ -n "$1" ]; do # while loop starts
 done
 
 for cont in 101 102 201 202; do
-	reset=$(check_weekly.sh $cont)
+	reset="YES"
 	echo "RESET CONTAINER "$cont": "$reset
 	
 	if [ $reset = "YES" ] || [ $force = 1 ]; then
@@ -31,8 +31,8 @@ for cont in 101 102 201 202; do
 		killsinglemitm.sh $cont
 		umount /dev/mapper/pve-vm--$cont--disk--1
 		pct destroy $cont
-		create.sh $cont
-		singlemitm.sh $cont
+		# create.sh $cont
+		# singlemitm.sh $cont
 	fi
 done
 
